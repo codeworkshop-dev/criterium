@@ -16,10 +16,12 @@ bot.on("messageCreate", async (msg) => {
   const botWasMentioned = msg.mentions.find(
     (mentionedUser) => mentionedUser.id === bot.user.id
   );
-
+  console.log(msg);
   if (botWasMentioned) {
     try {
-      await msg.channel.createMessage("Present");
+      await msg.channel.createMessage(
+        "Just kidding do not be worried, no need to increase your level of general caution."
+      );
     } catch (err) {
       // There are various reasons why sending a message may fail.
       // The API might time out or choke and return a 5xx status,
